@@ -5,9 +5,25 @@
     <title>Firebase Example</title>
 </head>
 <body>
+
     <h1>
         Firebase does the backend, so we can focus on the front-end. 
     </h1>
+
+    <form class="add">
+        <label for="user_id">User id</label>
+        <input type="number" name="user_id" required>
+        <label for="x_value">x-value</label>
+        <input type="number" name="x_value" required>
+        <label for="y_value">y-value</label>
+        <input type="number" name="y_value" required>
+        <label for="circle_size">circle-size</label>
+        <input type="number" name="circle_size" required>
+
+        <button>add new response</button>
+    </form>
+
+    <button type="button" id="viewDocsBtn">View documents</button>
 
     <script src="bundle.js"></script>
 </body>
