@@ -85,7 +85,8 @@ mapOfEvolution.forEach((values, keys) => {
     data: [
       //{ x: 10, y: 10 }
     ],
-    pointRadius: 20
+    hoverRadius: 20,
+    pointRadius: 40,
   })
 
   //populate buttons
