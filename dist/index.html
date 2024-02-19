@@ -4,23 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connecting chart to firestore</title>
+    <title>Dr. Arvid Survey</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="chartCard">
-
         <div class="chartBox">
 
-            <h2>Enter your estimates for the following evolutionary processes: </h2>
-
+            <h2>Place your estimates for the following evolutionary processes on the graph below. </h2>
+            <p>Below, the blue button is a selected evolutionary process. Click on the graph to place where you estimate it to go in relation 
+                to the axes. <br><br>
+                Once you have selected a position on the graph for each evolutionary process, a submit button will appear to 
+                submit your data.</p>
             <div class="column">
-                <div class="column" id="buttonsDiv"></div>
+                <div class="row" id="buttonsDiv"></div>
 
                 <canvas id="myChart"></canvas>
 
-                <button hidden id="submitBtn" onclick="">Submit response</button>
+                <button hidden id="submitBtn">Submit response</button>
+
+                <!-- Random ID Test-->
+                <button hidden id="random">Random ID</button>
             </div>
         </div>
     </div>

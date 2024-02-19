@@ -60,12 +60,12 @@ mapOfEvolution.set(6, 'non_selfish_elements')
 // 0 - hasn't made placement
 // 1 - placed
 var mapOfPlacement = new Map();
-mapOfPlacement.set(0, 1)
-mapOfPlacement.set(1, 1)
-mapOfPlacement.set(2, 1)
-mapOfPlacement.set(3, 1)
-mapOfPlacement.set(4, 1)
-mapOfPlacement.set(5, 1)
+mapOfPlacement.set(0, 0)
+mapOfPlacement.set(1, 0)
+mapOfPlacement.set(2, 0)
+mapOfPlacement.set(3, 0)
+mapOfPlacement.set(4, 0)
+mapOfPlacement.set(5, 0)
 mapOfPlacement.set(6, 0)
 
 var currSelectionKey = 0;
@@ -214,22 +214,23 @@ function checkCompletePlacements() {
 }
 
 document.getElementById("submitBtn").addEventListener("click", () => {
+  location.href = "thanks.html"
   console.log('submit')
 
+  var userId = generateUserId();
+  console.log(userId)
+
   mapOfEvolution.forEach((values, keys) => {
-    var randomId = getRandomId;
     var chartDataForKey = myChart.config.data.datasets[keys].data[0];
     var pointSize = myChart.config.data.datasets[keys].pointRadius;
     console.log(chartDataForKey, pointSize)
 
     addDoc(colRef, {
-      // user: addForm.user_id.valueAsNumber,
+      userId: userId,
       data: chartDataForKey,
       circle_size: pointSize,
-
     }).then(() => {
-      // returns a promise after it is complete
-     // addForm.reset(); // reseting values in the form
+      
     });
 
 
@@ -237,7 +238,12 @@ document.getElementById("submitBtn").addEventListener("click", () => {
 }
 );
 
-function getRandomId() {
-  let r = (Math.random() + 1).toString(36).substring(7);
-  return r;
+// Testing random number
+document.getElementById("random").addEventListener("click", () => {
+  var userId = generateUserId();
+  console.log(userId);
+})
+
+function generateUserId() {
+  return Math.round(Math.random()*100000);
 }
