@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -7,7 +7,7 @@
 .chartMenu {
   width: 100vw;
   height: 40px;
-  background: #1a1a1a;
+  background: #1A1A1A;
   color: rgba(54, 162, 235, 1);
 }
 
@@ -25,11 +25,45 @@
   justify-content: center;
 }
 
+
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+button {
+  margin: 1vh;
+  padding: 1vh;
+  border: solid 3px rgb(136, 139, 141);
+  background-color: rgb(206, 206, 206)
+} */
+
 .chartBox {
-  width: 700vh;
-  margin: 5vh;
   padding: 5vw;
   border-radius: 20px;
   border: solid 3px rgba(54, 162, 235, 1);
   background: white;
+}
+
+canvas {
+  height: 200vh;
+}
+
+.unselected {
+  background-color: rgb(206, 206, 206)
+}
+
+.selected {
+  background-color: rgb(166, 220, 215)
+}
+
+.added {
+  background: rgb(122, 185, 141)
 }

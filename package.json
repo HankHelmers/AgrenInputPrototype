@@ -16,6 +16,7 @@
     "webpack-tools": "^1.0.7"
   },
   "dependencies": {
+    "chart.js": "^4.4.1",
     "firebase": "^10.8.0"
   }
 }

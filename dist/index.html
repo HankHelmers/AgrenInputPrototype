@@ -1,44 +1,59 @@
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firebase Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connecting chart to firestore</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   
-
-    <!-- Import ChartJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-
-
     <div class="chartCard">
+
         <div class="chartBox">
-            <!--Chart references-->
-            <h2> Student Responses</h2>
-            <canvas id="myChart"></canvas>
 
-            <!--Inputting response testing-->
-            <form class="add">
-                <label for="user_id">User id</label>
-                <input type="number" name="user_id" required>
-                <label for="x_value">x-value</label>
-                <input type="number" name="x_value" required>
-                <label for="y_value">y-value</label>
-                <input type="number" name="y_value" required>
-                <label for="circle_size">circle-size</label>
-                <input type="number" name="circle_size" required>
+            <h2>Enter your estimates for the following evolutionary processes: </h2>
 
-                <button>add new response</button>
-            </form>
+            <div class="column">
+                <div class="column" id="buttonsDiv"></div>
+
+                <canvas id="myChart"></canvas>
+
+                <button hidden id="submitBtn" onclick="">Submit response</button>
+            </div>
         </div>
     </div>
 
 
+    <!-- Import ChartJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
 
     <script src="bundle.js"></script>
 </body>
 
 </html>
+
+<!--
+    REFERENCE: 
+
+    // datasets: [{
+        //     type: 'scatter',
+        //     label: 'Cytoplasmic Elements',
+        //     data: [
+        //         { x: 0, y: 10 }
+        //     ],
+        //     pointRadius: 10
+        // }
+        //     , {
+        //     type: 'scatter',
+        //     label: 'Genomic Imprinting',
+        //     data: [4.5],
+        // },
+        // {
+        //     type: 'scatter',
+        //     label: 'Greenbeard Genes',
+        //     data: [2, 3, 4, 4.5],
+        // },
+        // ],};
+-->
