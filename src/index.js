@@ -69,6 +69,7 @@ mapOfPlacement.set(5, 0)
 mapOfPlacement.set(6, 0)
 
 var currSelectionKey = 0;
+var currSize = 10;
 
 // setup 
 var data = {
