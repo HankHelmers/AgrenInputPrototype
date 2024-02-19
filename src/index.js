@@ -30,19 +30,19 @@ const db = getFirestore();
 // collection ref
 const colRef = collection(db, "responses");
 
-// retrieve documents collection data
-onSnapshot(colRef, (snapshot) => {
-  let surveyarvid = [];
+// // retrieve documents collection data
+// onSnapshot(colRef, (snapshot) => {
+//   let surveyarvid = [];
 
-  snapshot.docs.forEach((doc) => {
-    surveyarvid.push({
-      ...doc.data(),
-      id: doc.id,
-    });
-  });
+//   snapshot.docs.forEach((doc) => {
+//     surveyarvid.push({
+//       ...doc.data(),
+//       id: doc.id,
+//     });
+//   });
 
-  //console.log(surveyarvid);
-});
+//   //console.log(surveyarvid);
+// });
 
 
 ////////// ChartJS
@@ -214,7 +214,7 @@ function checkCompletePlacements() {
 }
 
 document.getElementById("submitBtn").addEventListener("click", () => {
-  location.href = "thanks.html"
+  // location.href = "thanks.html"
   console.log('submit')
 
   var userId = generateUserId();
@@ -227,14 +227,15 @@ document.getElementById("submitBtn").addEventListener("click", () => {
 
     addDoc(colRef, {
       userId: userId,
+      key: keys,
       data: chartDataForKey,
       circle_size: pointSize,
     }).then(() => {
-      
+      location.href = "thanks.html"
     });
-
-
   })
+
+  
 }
 );
 
